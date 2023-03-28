@@ -31,7 +31,6 @@ void Automata::choice(int ch) {
         choice_p = ch;
         if (cash >= prices[choice_p]) {
             state = CHECK;
-            check();
         } else {
             state = ACCEPT;
         }

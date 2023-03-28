@@ -18,11 +18,11 @@ TEST(task2, test2) {
 TEST(task3, test3) {
     Automata a;
     a.on();
-    a.choice(1);
-    a.coin(120);
-    ASSERT_EQ(Automata::State::CHECK, a.getState());
+    a.coin(100);
+    a.choice(0);
+    ASSERT_EQ(a.getState(), Automata::State::CHECK);
     ASSERT_TRUE(a.check());
-    ASSERT_EQ(Automata::State::COOK, a.getState());
+    ASSERT_EQ(a.getState(), Automata::State::COOK);
 }
 
 TEST(task4, test4) {
