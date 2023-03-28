@@ -38,12 +38,12 @@ void Automata::choice(int ch) {
     }
 }
 bool Automata::check() {
-    if (state == ACCEPT) {
+    if (state == CHECK) {
         if (cash - prices[choice_p] >= 0) {
-            state = CHECK;
             cook();
             return true;
-        } else {
+        }
+        else {
             state = ACCEPT;
         }
     }
