@@ -18,8 +18,8 @@ TEST(task2, test2) {
 TEST(task3, test3) {
     Automata a;
     a.on();
+    a.choice(1);
     a.coin(120);
-    a.choice(0);
     ASSERT_EQ(Automata::State::CHECK, a.getState());
     ASSERT_TRUE(a.check());
     ASSERT_EQ(Automata::State::COOK, a.getState());
