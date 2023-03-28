@@ -42,8 +42,7 @@ bool Automata::check() {
         if (cash - prices[choice_p] >= 0) {
             cook();
             return true;
-        }
-        else {
+        } else {
             state = ACCEPT;
         }
     }
